@@ -20,8 +20,8 @@ Zoznam
 | CDVII                                     | [110406](/110406/) | 2           | Ján Fekeš         | -        |
 | How Many Fibs?                            | [110601](/110601/) | 1           | Peter Franček     | Ano      |
 | Summation of Four Primes                  | [110705](/110705/) | 2           | Peter Franček     | Ano      |
-| Check the Check                           | [110107](/110107/) | 1           | Ladislav Gubala   | Nie      |
-| Interpreter                               | [110106](/110106/) | 2           | Ladislav Gubala   | Nie      |
+| Check the Check                           | [110107](/110107/) | 1           | Ladislav Gubala   | Ano      |
+| Interpreter                               | [110106](/110106/) | 2           | Ladislav Gubala   | Ano      |
 | Hanoi Tower Troubles Again!               | [110908](/110908/) | 3           | Ivan Hraško       | Ano      |
 | A Multiplication Game                     | [110505](/110505/) | 3           | Ivan Hraško       | Ano      |
 | Primary Arithmetic                        | [110501](/110501/) | 1           | Pavel Jančiar     | Ano      |

@@ -1,0 +1,388 @@
+*********************************************************************************
+* Description: Check the Check - Problem 110107 (http://programming-challenges.com)
+* Author: Ladislav Gubala
+**********************************************************************************
+
+
+
+#include <iostream>
+#include <vector>
+ 
+#define BOARD_SIZE 8
+#define WHITE_PLAYER 0
+#define BLACK_PLAYER 1
+#define NO_CHECK 2
+#define WHITE_CHECK 3
+#define BLACK_CHECK 4
+ 
+using namespace std;
+ 
+/**
+* Vyhodnotí ak je poskytovaná pozícia na sachovnici platná
+*/
+bool validPosition(int x, int y)
+{
+    if (x >= 0 && x < BOARD_SIZE && y >= 0 && y < BOARD_SIZE)
+        return true;
+    return false; 
+}
+ 
+/**
+* Vyhodnotí ak je "šach" na krála
+*/
+bool checkKing(const vector< vector<char> > & board, int x, int y, int player)
+{
+    char opponentKing = 'k';
+    if (player == BLACK_PLAYER)
+        opponentKing = 'K';
+    // check the left position
+    if (validPosition(x - 1, y) && board.at(y).at(x - 1) == opponentKing)
+        return true;
+    // check the right position
+    else if (validPosition(x + 1, y) && board.at(y).at(x + 1) == opponentKing)
+        return true;
+    // check above
+    else if (validPosition(x, y - 1) && board.at(y - 1).at(x) == opponentKing)
+        return true;
+    // check below
+    else if (validPosition(x, y + 1) && board.at(y + 1).at(x) == opponentKing)
+        return true;
+    // check to the right and upwards
+    else if (validPosition(x + 1, y - 1) && board.at(y - 1).at(x + 1) == opponentKing)
+        return true;
+    // check to the left and upwards
+    else if (validPosition(x - 1, y - 1) && board.at(y - 1).at(x - 1) == opponentKing)
+        return true;
+    // check to the left and downwards
+    else if (validPosition(x - 1, y + 1) && board.at(y + 1).at(x - 1) == opponentKing)
+        return true;
+    // check to the right and downwards
+    else if (validPosition(x + 1, y + 1) && board.at(y + 1).at(x + 1) == opponentKing)
+        return true;
+    return false;
+}
+ 
+/**
+* vyhodnotí ak je daný "šach" králom
+*/
+bool checkKnight(const vector< vector<char> > & board, int x, int y, int player)
+{
+    char opponentKing = 'k';
+    if (player == BLACK_PLAYER)
+        opponentKing = 'K';
+    if (validPosition(x + 1, y - 2) && board.at(y - 2).at(x + 1) == opponentKing)
+        return true;
+    else if (validPosition(x - 1, y - 2) && board.at(y - 2).at(x - 1) == opponentKing)
+        return true;
+    else if (validPosition(x + 1, y + 2) && board.at(y + 2).at(x + 1) == opponentKing)
+        return true;
+    else if (validPosition(x - 1, y + 2) && board.at(y + 2).at(x - 1) == opponentKing)
+        return true;
+    else if (validPosition(x + 2, y - 1) && board.at(y - 1).at(x + 2) == opponentKing)
+        return true;
+    else if (validPosition(x - 2, y - 1) && board.at(y - 1).at(x - 2) == opponentKing)
+        return true;
+    else if (validPosition(x + 2, y + 1) && board.at(y + 1).at(x + 2) == opponentKing)
+        return true;
+    else if (validPosition(x - 2, y + 1) && board.at(y + 1).at(x - 2) == opponentKing)
+        return true;
+    return false;
+}
+ 
+/**
+* vyhodnotí ak je daný "šach" strelcom
+*/
+bool checkBishop(const vector< vector<char> > & board, int x, int y, int player)
+{
+    char opponentKing = 'k';
+    if (player == BLACK_PLAYER)
+        opponentKing = 'K';
+    // check diagonally to the right and downwards
+    for (int i = 1; i <= (BOARD_SIZE - 1) - x; ++i)
+    {
+        if (y + i < BOARD_SIZE)
+        {
+            // if there is another piece that is not the king then no check is possible in this direction
+            if (board.at(y + i).at(x + i) != opponentKing && board.at(y + i).at(x + i) != '.')
+                break;
+            if (board.at(y + i).at(x + i) == opponentKing)
+                return true;
+        }
+        else
+            break;
+    }
+    // check diagonally to the right and upwards
+    for (int i = 1; i <= (BOARD_SIZE - 1) - x; ++i)
+    {
+        if (y - i >= 0)
+        {
+            // if there is another piece that is not the king then no check is possible in this direction
+            if (board.at(y - i).at(x + i) != opponentKing && board.at(y - i).at(x + i) != '.')
+                break;
+            if (board.at(y - i).at(x + i) == opponentKing)
+                return true;
+        }
+        else
+            break;
+    }
+    // check diagonally to the left and downwards
+    for (int i = 1; i <= x; ++i)
+    {
+        if (y + i < BOARD_SIZE)
+        {
+            // if there is another piece that is not the king then no check is possible in this direction
+            if (board.at(y + i).at(x - i) != opponentKing && board.at(y + i).at(x - i) != '.')
+                break;
+            if (board.at(y + i).at(x - i) == opponentKing)
+                return true;
+        }
+        else
+            break;
+    }
+    // check diagonally to the left and upwards
+    for (int i = 1; i <= x; ++i)
+    {
+        if (y - i >= 0)
+        {
+            // if there is another piece that is not the king then no check is possible in this direction
+            if (board.at(y - i).at(x - i) != opponentKing && board.at(y - i).at(x - i) != '.')
+                break;
+            if (board.at(y - i).at(x - i) == opponentKing)
+                return true;
+        }
+        else
+            break;
+    }
+    return false;
+}
+ 
+/**
+* vyhodnotí ak je daný "šach" vežou
+*/
+bool checkRook(const vector< vector<char> > & board, int x, int y, int player)
+{
+    char opponentKing = 'k';
+    if (player == BLACK_PLAYER)
+        opponentKing = 'K'; 
+    // check to the right of the rook
+    for (int i = x + 1; i < BOARD_SIZE; ++i)
+    {
+        // if there is another piece that is not the king then no check is possible in this direction
+        if (board.at(y).at(i) != opponentKing && board.at(y).at(i) != '.')
+            break;
+        if (board.at(y).at(i) == opponentKing)
+            return true;     
+    }
+    // check to the left of the rook
+    for (int i = x - 1; i >= 0; --i)
+    {
+        // if there is another piece that is not the king then no check is possible in this direction
+        if (board.at(y).at(i) != opponentKing && board.at(y).at(i) != '.')
+            break;
+        if (board.at(y).at(i) == opponentKing)
+            return true;     
+    }
+    // check downwards of the rook
+    for (int i = y + 1; i < BOARD_SIZE; ++i)
+    {
+        // if there is another piece that is not the king then no check is possible in this direction
+        if (board.at(i).at(x) != opponentKing && board.at(i).at(x) != '.')
+            break;
+        if (board.at(i).at(x) == opponentKing)
+            return true;     
+    }
+    // check to the upwards of the rook
+    for (int i = y - 1; i >= 0; --i)
+    {
+        // if there is another piece that is not the king then no check is possible in this direction
+        if (board.at(i).at(x) != opponentKing && board.at(i).at(x) != '.')
+            break;
+        if (board.at(i).at(x) == opponentKing)
+            return true;     
+    }
+    return false;
+}
+ 
+/**
+* vyhodnotí ak je daný "šach" královnou
+*/
+bool checkQueen(const vector< vector<char> > & board, int x, int y, int player)
+{
+    return (checkBishop(board, x, y, player) || checkRook(board, x, y, player));
+}
+ 
+/**
+* vyhodnotí ak je daný "šach" pešiakom
+*/
+bool checkPawn(const vector< vector<char> > & board, int x, int y, int player)
+{
+    if (player == WHITE_PLAYER)
+    {
+        if (y > 0)
+        {
+            if (x > 0)
+            {
+                if (board.at(y - 1).at(x - 1) == 'k')
+                    return true;
+            }
+            if (x < BOARD_SIZE - 1)
+            {
+                if (board.at(y - 1).at(x + 1) == 'k')
+                    return true;
+            }
+        }
+        return false;
+    }
+    else
+    {
+        if (y < BOARD_SIZE - 1)
+        {
+            if (x > 0)
+            {
+                if (board.at(y + 1).at(x - 1) == 'K')
+                    return true;
+            }
+            if (x < BOARD_SIZE - 1)
+            {
+                if (board.at(y + 1).at(x + 1) == 'K')
+                    return true;
+            }
+        }
+        return false;
+    }
+}
+ 
+/**
+* vyhodnotí ak je daný "šach" hockitorou figúrkou na hociktorej strane
+*/
+int check(const vector< vector<char> > & board)
+{
+	for (int i = 0; i < BOARD_SIZE; ++i)
+	{
+		for (int j = 0; j < BOARD_SIZE; ++j)
+		{
+			char currentPiece = board.at(i).at(j);
+			if (currentPiece == 'p' && checkPawn(board, j, i, BLACK_PLAYER))
+                return WHITE_CHECK;
+            else if (currentPiece == 'P' && checkPawn(board, j, i, WHITE_PLAYER))
+                return BLACK_CHECK;
+            else if (currentPiece == 'r' && checkRook(board, j, i, BLACK_PLAYER))
+                return WHITE_CHECK;
+            else if (currentPiece == 'R' && checkRook(board, j, i, WHITE_PLAYER))
+                return BLACK_CHECK;
+            else if (currentPiece == 'b' && checkBishop(board, j, i, BLACK_PLAYER))
+                return WHITE_CHECK;
+            else if (currentPiece == 'B' && checkBishop(board, j, i, WHITE_PLAYER))
+                return BLACK_CHECK;
+            else if (currentPiece == 'q' && checkQueen(board, j, i, BLACK_PLAYER))
+                return WHITE_CHECK;
+            else if (currentPiece == 'Q' && checkQueen(board, j, i, WHITE_PLAYER))
+                return BLACK_CHECK;
+            else if (currentPiece == 'n' && checkKnight(board, j, i, BLACK_PLAYER))
+                return WHITE_CHECK;
+            else if (currentPiece == 'N' && checkKnight(board, j, i, WHITE_PLAYER))
+                return BLACK_CHECK;
+            else if (currentPiece == 'k' && checkKing(board, j, i, BLACK_PLAYER))
+                return WHITE_CHECK;
+            else if (currentPiece == 'K' && checkKing(board, j, i, WHITE_PLAYER))
+                return BLACK_CHECK;
+		}
+	}
+	return NO_CHECK;
+}
+ 
+/**
+* pozrie èi sa na šachovnici nieèo nachádza
+*/
+bool isEmpty(const vector< vector<char> > & board)
+{
+	for (int i = 0; i < BOARD_SIZE; ++i)
+	{
+		for (int j = 0; j < BOARD_SIZE; ++j)
+		{
+			if (board.at(i).at(j) != '.')
+				return false;
+		}
+	}
+	return true;
+}
+ 
+/**
+* Vytvorenie novej prázdnej šachovnice
+*/
+vector< vector<char> > createNewBoard()
+{
+	vector< vector<char> > board;
+	for (int i = 0; i < BOARD_SIZE; ++i)
+	{
+		vector<char> row;
+		for (int j = 0; j < BOARD_SIZE; ++j)
+			row.push_back('.');
+		board.push_back(row);
+	}
+	return board;
+}
+ 
+/**
+* Vypisanie šachovnice
+*/
+void printBoard(const vector< vector<char> > & board)
+{
+	for (int i = 0; i < BOARD_SIZE; ++i)
+	{
+		for (int j = 0; j < BOARD_SIZE; ++j)
+			cout << board.at(i).at(j);
+		cout << endl;
+	}
+}
+ 
+int main()
+{
+	int currentRow = 1; 		// initialized in 1 because when 0 the input line is skipped
+    int currentGame = 1;        // the current game being played
+	char a, b, c, d, e, f, g, h; 	// each position in a row of the chess board
+	vector< vector<char> > board = createNewBoard();
+ 
+	while (true)
+	{
+		// skip this input line
+		if (currentRow == 0)
+		{
+			++currentRow;
+			continue;
+		}
+		// Last row and board is ready to be processed
+		if (currentRow > BOARD_SIZE)
+		{
+			// If the board is empty then end the session
+			if (isEmpty(board))
+				break;
+            // Test if there is a "check" in the board
+            int result = check(board);
+            if (result == NO_CHECK)
+                cout << "Game #" << currentGame << ": no king is in check." << endl;            
+            else if (result == WHITE_CHECK)
+                cout << "Game #" << currentGame << ": white king is in check." << endl;  
+            else if (result == BLACK_CHECK)
+                cout << "Game #" << currentGame << ": black king is in check." << endl;
+			// Reset the board for a new input
+			currentRow = 0;
+            ++currentGame;
+			board = createNewBoard();
+			continue;
+		}
+ 
+		cin >> a >> b >> c >> d >> e >> f >> g >> h;
+ 
+		board.at(currentRow - 1).at(0) = a;
+		board.at(currentRow - 1).at(1) = b;
+		board.at(currentRow - 1).at(2) = c;
+		board.at(currentRow - 1).at(3) = d;
+		board.at(currentRow - 1).at(4) = e;
+		board.at(currentRow - 1).at(5) = f;
+		board.at(currentRow - 1).at(6) = g;
+		board.at(currentRow - 1).at(7) = h;
+		++currentRow;
+	}
+	return 0;
+}
