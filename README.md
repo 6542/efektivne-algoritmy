@@ -38,7 +38,7 @@ Zoznam
 |Knights of the Round Table      |[111303](/111303/)|-                          |2          |Jozef Medveď     |Ano     |
 |The Trip                        |[110103](/110103/)|-                          |1          |Tomáš Nguyen     |Ano     |
 |Where’s Waldorf?                |[110302](/110302/)|-                          |2          |Tomáš Nguyen     |Ano     |
-|Stack ’em Up                    |[110205](/110205/)|-                          |1          |Matúš Novysedlák |Nie     |
+|Stack ’em Up                    |[110205](/110205/)|-                          |1          |Matúš Novysedlák |Ano     |
 |Yahtzee                         |[110208](/110208/)|-                          |3          |Matúš Novysedlák |Nie     |
 |Common Permutation              |[110303](/110303/)|-                          |1          |Peter Otto       |Ano     |
 |Shoemaker’s Problem             |[110405](/110405/)|-                          |2          |Peter Otto       |Ano     |
