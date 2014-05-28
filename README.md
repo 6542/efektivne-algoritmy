@@ -17,7 +17,7 @@ Zoznam
 |Contest Scoreboard              |[110207](/110207/)|[Popis](/110207/popis.txt) |1          |Juraj Bubniak    |Ano     |
 |Crypt Kicker                    |[110204](/110204/)|[Popis](/110204/popis.txt) |2          |Juraj Bubniak    |Ano     |
 |How Many Fibs?                  |[110601](/110601/)|[Popis](/110601/popis.txt) |1          |Peter Franček    |Ano     |
-|Summation of Four Primes        |[110705](/110705/)|-                          |2          |Peter Franček    |Ano     |
+|Summation of Four Primes        |[110705](/110705/)|[Popis](/110705/popis.txt) |2          |Peter Franček    |Ano     |
 |Check the Check                 |[110107](/110107/)|-                          |1          |Ladislav Gubala  |Ano     |
 |Interpreter                     |[110106](/110106/)|-                          |2          |Ladislav Gubala  |Ano     |
 |Hanoi Tower Troubles Again!     |[110908](/110908/)|-                          |3          |Ivan Hraško      |Ano     |
