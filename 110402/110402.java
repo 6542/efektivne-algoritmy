@@ -1,27 +1,30 @@
-NaËÌtam si riadok intov, ktorÈ si zapÌöem do dvoch rÙznych array listov v sortedFlapjacks ich natvrdo
-zoradÌm a porovn·vam s nÌm pÙvodne poæe flapjacks aby som zistil Ëi je zoradenÈ. Porovn·va Ëi je 
-na spodku najv‰Ëöie ËÌslo. Vezme si dlzku pÙvodnÈho poæa a odr·ta od neho poËet prvkov v poli ktorÈ
-netreba ot·Ëaù a zvyöok poæa otoËÌö. takto to pokraËuje aû k˝m nie je zoradenÈ.
+/*
+    110402 - Stacks of Flapjacks
+    ----------------------------
 
-
+    Nac√≠tam si riadok intov, ktor√© si zap√≠≈°em do dvoch r√¥znych array listov v sortedFlapjacks ich natvrdo
+    zorad√≠m a porovn√°vam s n√≠m p√¥vodne pole flapjacks aby som zistil ci je zoraden√©. Porovn√°va ci je
+    na spodku najv√§c≈°ie c√≠slo. Vezme si dlzku p√¥vodn√©ho pola a odr√°ta od neho pocet prvkov v poli ktor√©
+    netreba ot√°ca¬ù a zvy≈°ok pola otoc√≠s. Takto to pokracuje a≈æ k√Ωm nie je zoraden√©.
+*/
 
 public class Main {
     public static void main(String[] args) {
         Main.begin();
     }
- 
+
     private static void begin() {
         Scanner sc = new Scanner(System.in);
         while (sc.hasNextLine()) {
             processFlapjacks(sc.nextLine());
         }
     }
- 
+
     private static void processFlapjacks(String line) {
         List<Integer> flapjacks = new ArrayList<Integer>();
         List<Integer> sortedFlapjacks = new ArrayList<Integer>();
         List<Integer> flipIndices = new LinkedList<Integer>();
- 
+
         // Read in the flapjacks
         Scanner sc = new Scanner(line);
         while (sc.hasNextInt()) {
@@ -29,31 +32,31 @@ public class Main {
             flapjacks.add(n);
             sortedFlapjacks.add(n);
         }
-        Collections.sort(sortedFlapjacks); 
-        
+        Collections.sort(sortedFlapjacks);
+
         int length = flapjacks.size();
         for (int i = length - 1; i > 0; i--) {
             int n = sortedFlapjacks.get(i);
             if (n == flapjacks.get(i)) {
                 continue;
             }
- 
+
             int flipIndex = length - flapjacks.indexOf(n);
             if (flipIndex != length) {
                 flip(flapjacks, flipIndex);
                 flipIndices.add(flipIndex);
             }
- 
+
             flipIndex = length - i;
             flip(flapjacks, flipIndex);
             flipIndices.add(flipIndex);
         }
- 
+
         // Print the original stack.
         System.out.println(line);
         print(flipIndices);
     }
- 
+
     private static void print(List<Integer> flipIndices) {
         StringBuilder sb = new StringBuilder();
         for (Integer flipIndex : flipIndices) {
@@ -63,7 +66,7 @@ public class Main {
         sb.append(0);
         System.out.println(sb);
     }
- 
+
     private static void flip(List<Integer> flapjacks, int flipIndex) {
         Collections.reverse(flapjacks.subList(0, flapjacks.size() - flipIndex + 1));
     }

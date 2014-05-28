@@ -160,6 +160,15 @@ obtiaznost = 'Obtiaznost'
 student = 'Student'
 hotove = 'Hotove'
 root = os.path.abspath(os.path.dirname(__file__))
+header = r"""
+efektivne-algoritmy
+===================
+
+Ludia posielajte okomentovane zdrojaky nie prezentacie a wordacke dokumenty.
+
+Zoznam
+------
+"""
 
 
 def existuje(idx):
@@ -174,59 +183,66 @@ def popis_link(idx):
     return '[Link](/{0}/popis.txt)'.format(idx) if existuje_popis(idx) else '-'
 
 
-print '|',
-print nazov.ljust(41),
-print '|',
-print uloha.ljust(18),
-print '|',
-print popis.ljust(27),
-print '|',
-print obtiaznost.ljust(11),
-print '|',
-print student.ljust(17),
-print '|',
-print hotove.ljust(8),
-print '|'
-print '|',
-print 41 * '-',
-print '|',
-print 18 * '-',
-print '|',
-print 27 * '-',
-print '|',
-print 11 * '-',
-print '|',
-print 17 * '-',
-print '|',
-print 8 * '-',
-print '|'
+with open('README.md', 'w') as fp:
+    fp.write(header.strip())
+    fp.write('\n\n')
+    fp.write('|')
+    fp.write(nazov.ljust(32))
+    fp.write('|')
+    fp.write(uloha.ljust(18))
+    fp.write('|')
+    fp.write(popis.ljust(27))
+    fp.write('|')
+    fp.write(obtiaznost.ljust(11))
+    fp.write('|')
+    fp.write(student.ljust(17))
+    fp.write('|')
+    fp.write(hotove.ljust(8))
+    fp.write('|')
+    fp.write('\n')
+    fp.write('|')
+    fp.write(32 * '-')
+    fp.write('|')
+    fp.write(18 * '-')
+    fp.write('|')
+    fp.write(27 * '-')
+    fp.write('|')
+    fp.write(11 * '-')
+    fp.write('|')
+    fp.write(17 * '-')
+    fp.write('|')
+    fp.write(8 * '-')
+    fp.write('|')
+    fp.write('\n')
 
-for name, lastname, id1, level1, id2, level2 in lines:
-    fullname = u'{0} {1}'.format(name, lastname)
+    for name, lastname, id1, level1, id2, level2 in lines:
+        fullname = u'{0} {1}'.format(name, lastname)
 
-    print '|',
-    print task_dict[id1].ljust(41),
-    print '|',
-    print '[{0}](/{1}/)'.format(id1, id1),
-    print '|',
-    print popis_link(id1).ljust(27, ' '),
-    print '|',
-    print level1.ljust(11, ' '),
-    print '|',
-    print fullname.ljust(17, ' '),
-    print '|',
-    print existuje(id1).ljust(8),
-    print '|'
-    print '|',
-    print task_dict[id2].ljust(41),
-    print '|',
-    print '[{0}](/{1}/)'.format(id2, id2),
-    print '|',
-    print popis_link(id2).ljust(27, ' '),
-    print '|',
-    print level2.ljust(11, ' '),
-    print '|',
-    print fullname.ljust(17, ' '),
-    print '|',
-    print existuje(id2).ljust(8),
-    print '|'
+        fp.write('|')
+        fp.write(task_dict[id1].ljust(32).encode('utf-8'))
+        fp.write('|')
+        fp.write('[{0}](/{1}/)'.format(id1, id1))
+        fp.write('|')
+        fp.write(popis_link(id1).ljust(27, ' '))
+        fp.write('|')
+        fp.write(level1.ljust(11, ' '))
+        fp.write('|')
+        fp.write(fullname.ljust(17, ' ').encode('utf-8'))
+        fp.write('|')
+        fp.write(existuje(id1).ljust(8))
+        fp.write('|')
+        fp.write('\n')
+        fp.write('|')
+        fp.write(task_dict[id2].ljust(32).encode('utf-8'))
+        fp.write('|')
+        fp.write('[{0}](/{1}/)'.format(id2, id2))
+        fp.write('|')
+        fp.write(popis_link(id2).ljust(27, ' '))
+        fp.write('|')
+        fp.write(level2.ljust(11, ' '))
+        fp.write('|')
+        fp.write(fullname.ljust(17, ' ').encode('utf-8'))
+        fp.write('|')
+        fp.write(existuje(id2).ljust(8))
+        fp.write('|')
+        fp.write('\n')

@@ -1,7 +1,12 @@
-NaËit·vanie dvoch ËÌsel v riadku, predpoklad·me ûe prvÈ je menöie ako druhÈ ak nie tak ich vymenÌme, postupne prech·dzam vöetky ËÌsla medzi prv˝ a druh˝m
-a aplikujem algoritmus ak je ËÌslo p·rne, vydelÌm ho dvoma, ak je nep·rne vyn·sobim ho troma a pripoËÌtam jedna. PoËit·m si cykly, ktorÈ s˙ potrebnÈ k tomu aby  som sa dostal
-k jednotke. Ak prejdme vsetk˝ Ëisla vratim maximaln˝ poËet ciklov.
+/*
+    110101 - The 3n + 1 problem
+    ---------------------------
 
+    Nacitavanie dvoch c√≠sel v riadku, predpoklad√°me ≈æe prv√© je men≈°ie ako druh√© ak nie tak ich vymen√≠me,
+    postupne prech√°dzam v≈°etky c√≠sla medzi prv√Ω a druh√Ωm a aplikujem algoritmus ak je c√≠slo p√°rne, vydel√≠m ho dvoma,
+    ak je nep√°rne vyn√°sobim ho troma a pripoc√≠tam jedna. Pocitam si cykly, ktor√© s√∫ potrebn√© k tomu aby  som sa dostal k jednotke.
+    Ak prejdme vsetk√Ω cisla vratim maximaln√Ω pocet ciklov.
+*/
 
 public class Main
 {
@@ -14,7 +19,7 @@ public class Main
          String REGEX_WHITESPACE = "\\s+";
          String cleanLine = line.trim().replaceAll(REGEX_WHITESPACE, " ");
          String[] tokens = cleanLine.split(REGEX_WHITESPACE);
-        
+
          if (tokens.length == 2) {
            int a1 = Integer.parseInt(tokens[0]);
            int a2 = Integer.parseInt(tokens[1]);
@@ -22,7 +27,7 @@ public class Main
          }
       }
    }
- 
+
    static int solve(int a1, int a2) throws IOException
    {
      int maxCycleLength = 0;
@@ -34,31 +39,31 @@ public class Main
        from = a2;
        to = a1;
      }
-    
+
      for(int i = from; i <= to; i++)
      {
        int currentCycleLength = calculateCycleLength(i);
        if(currentCycleLength > maxCycleLength)
          maxCycleLength = currentCycleLength;
      }
-    
-     return maxCycleLength; 
+
+     return maxCycleLength;
    }
-    
+
    static int calculateCycleLength(int num)
    {
      int cycleLength = 1;
-     
+
      while(num != 1)
      {
        cycleLength++;
-       
+
        if(num % 2 == 0) //number is even
          num = num / 2;
        else //number is odd
          num = num * 3 + 1;
       }
-     
+
       return cycleLength;
    }
 }

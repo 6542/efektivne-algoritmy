@@ -1,0 +1,7 @@
+110101 - The 3n + 1 problem
+---------------------------
+
+Nacitavanie dvoch císel v riadku, predpokladáme že prvé je menšie ako druhé ak nie tak ich vymeníme,
+postupne prechádzam všetky císla medzi prvý a druhým a aplikujem algoritmus ak je císlo párne, vydelím ho dvoma,
+ak je nepárne vynásobim ho troma a pripocítam jedna. Pocitam si cykly, ktoré sú potrebné k tomu aby  som sa dostal k jednotke.
+Ak prejdme vsetký cisla vratim maximalný pocet cyklov.

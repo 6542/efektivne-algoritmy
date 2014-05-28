@@ -1,0 +1,7 @@
+110402 - Stacks of Flapjacks
+----------------------------
+
+Nacítam si riadok intov, ktoré si zapíšem do dvoch rôznych array listov v sortedFlapjacks ich natvrdo
+zoradím a porovnávam s ním pôvodne pole flapjacks aby som zistil ci je zoradené. Porovnáva ci je
+na spodku najväcšie císlo. Vezme si dlzku pôvodného pola a odráta od neho pocet prvkov v poli ktoré
+netreba otáca a zvyšok pola otocís. Takto to pokracuje až kým nie je zoradené.
