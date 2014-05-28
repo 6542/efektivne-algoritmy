@@ -32,8 +32,8 @@ Zoznam
 |Stacks of Flapjacks             |[110402](/110402/)|[Popis](/110402/popis.txt) |2          |Peter Kajan      |Ano     |
 |Automated Judge Script          |[110305](/110305/)|[Popis](/110305/popis.txt) |1          |Ján Maár         |Ano     |
 |15-Puzzle Problem               |[110802](/110802/)|-                          |3          |Ján Maár         |Nie     |
-|Self-describing Sequence        |[110607](/110607/)|-                          |2          |Matúš Marko      |Nie     |
-|Dermuba Triangle                |[111207](/111207/)|-                          |2          |Matúš Marko      |Nie     |
+|Self-describing Sequence        |[110607](/110607/)|-                          |2          |Matúš Marko      |Ano     |
+|Dermuba Triangle                |[111207](/111207/)|-                          |2          |Matúš Marko      |Ano     |
 |Light                           |[110701](/110701/)|-                          |1          |Jozef Medveď     |Ano     |
 |Knights of the Round Table      |[111303](/111303/)|-                          |2          |Jozef Medveď     |Ano     |
 |The Trip                        |[110103](/110103/)|-                          |1          |Tomáš Nguyen     |Ano     |
@@ -51,4 +51,4 @@ Zoznam
 |Jolly Jumpers                   |[110201](/110201/)|[Popis](/110201/popis.txt) |1          |Štefan Ušák      |Ano     |
 |Rope Crisis in Ropeland!        |[111302](/111302/)|-                          |2          |Štefan Ušák      |Ano     |
 |Carmichael Numbers              |[110702](/110702/)|-                          |2          |Martin Jančo     |Ano     |
-|Euclid Problem                  |[110703](/110703/)|-                          |1          |Martin Jančo     |Nie     |
+|Euclid Problem                  |[110703](/110703/)|-                          |1          |Martin Jančo     |Ano     |
