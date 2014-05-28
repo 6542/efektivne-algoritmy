@@ -9,8 +9,8 @@ import java.util.Scanner;
 import java.util.StringTokenizer;
 
 /*
-    Crypt kicker
-    ------------
+    110204 - Crypt kicker
+    ---------------------
 
     Častá, ale nie moc bezpečná metóda šifrovania textu je permutácia písmen abecedy.
     Inými slovami, každé písmeno v abecede je nahradené v texte iným písmenom.

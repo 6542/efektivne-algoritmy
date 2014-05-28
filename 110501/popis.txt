@@ -1,0 +1,5 @@
+110501 - Primary Arithmetic
+---------------------------
+
+Program hlada pocet "carry" operacii. Nacita si riadok, rozdeli podla medzery a potom postupne
+odzadu scitava cisla. Ak je sucet viac ako 9 tak pripocita carry a prechadza na dalsie cisla.

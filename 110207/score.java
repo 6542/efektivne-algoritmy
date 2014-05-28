@@ -6,8 +6,8 @@ import java.util.Collections;
 import java.util.List;
 
 /*
-    Contest Scoreboard
-    ------------------
+    110207 - Contest Scoreboard
+    ---------------------------
 
     Chcete súťažiť v ACM ICPC? Potom ste mali vedieť ako udržať skóre! Súťažiaci sú hodnotený najprv
     podľa počtu vyriešených problémov (čím viac, tým lepšie), potom podľa klesajúceho množstva

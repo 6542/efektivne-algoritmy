@@ -1,10 +1,14 @@
-Vytvorenie hodnotiaceho systemy pre rozhodcov. Berie do uvahy 3 odpovede accept
-, presentation error, wronganswer. 
-Vstupom pre kazdu otazku/vstup je kladne cislo n < 100 ktore urcuje pocet 
-riadkov spravnej odpovede otazky. Dalsi riadok s 'n' predstavuje odpoved.
-Premenna m < 100 predstavuje pocet riadkov danej odpovede, dalsie riadky s 'm'
-obsahuju uz priamo odpoved.
-Ziadny riadok nesmie mat viac ako 100 znakov.
+/*
+    110305 - Automated Judge Script
+    -------------------------------
+
+    Vytvorenie hodnotiaceho systemu pre rozhodcov.
+    Berie do uvahy 3 odpovede: accept, presentation error, wronganswer.
+    Vstupom pre kazdu otazku/vstup je kladne cislo n < 100 ktore urcuje pocet
+    riadkov spravnej odpovede otazky. Dalsi riadok s 'n' predstavuje odpoved.
+    Premenna m < 100 predstavuje pocet riadkov danej odpovede, dalsie riadky s 'm'
+    obsahuju uz priamo odpoved. Ziadny riadok nesmie mat viac ako 100 znakov.
+*/
 
 #include <stdio.h>
 #include <string.h>
@@ -70,7 +74,7 @@ int main () //main
         else if ( presentation () )
             printf ("Run #%d: Presentation Error\n", ++run);  //ak sa nezhoduju znaky z odpovede a otazky error
         else
-            printf ("Run #%d: Wrong Answer\n", ++run);   // ak ani jedno tak je zle 
+            printf ("Run #%d: Wrong Answer\n", ++run);   // ak ani jedno tak je zle
     }
     return 0;
 }

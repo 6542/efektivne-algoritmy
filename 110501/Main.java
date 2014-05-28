@@ -1,13 +1,14 @@
-//110501 Primary Arithmetic
 import java.util.Scanner;
-
-/*
- * Main.java
- *  java program model for www.programming-challenges.com
- */
-
 import java.io.*;
 import java.util.*;
+
+/*
+    110501 - Primary Arithmetic
+    ---------------------------
+
+    Program hlada pocet "carry" operacii. Nacita si riadok, rozdeli podla medzery a potom postupne
+    odzadu scitava cisla. Ak je sucet viac ako 9 tak pripocita carry a prechadza na dalsie cisla.
+*/
 
 class Main implements Runnable{
     static String ReadLn(int maxLength){  // utility function to read from stdin,
@@ -91,6 +92,3 @@ class myStuff implements Runnable{
     }
     // You can insert more classes here if you want.
 }
-
-// Pogram hlada pocet "carry" operacii. Nacita si riadok, rozdeli podla medzery a potom postupne
-// odzadu scitava cisla. Ak je sucet viac ako 9 tak pripocita carry a prechadza na dalsie cisla.

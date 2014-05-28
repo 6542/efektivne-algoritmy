@@ -1,0 +1,27 @@
+110408 - Football (aka Soccer)
+------------------------------
+
+Máme zoznam turnajov. V prvom riadku je pocet turnajov. Nasleduje to nazvom turnaju. Poctom tımov v turnaji. Vymenovaním tımov v turnaji. Poctom zápasov. Vymenované zápasy. A hned za tım nasleduje dalsí turnaj ak nejakı je.
+
+Nacítame si najprv pocet turnajov. V cykle si potom nacítavam informácie o danom turnaji.
+Takéto nieco Brazil#2@1#Scotland rozoberáme pomocou substring (napr. String teamOne = game.substring(0, game.indexOf("#")); ). Data zapisujem do dvojrozmerneho pola, ktory ma pocet riadkov kolko je tymov. A pocet stlpcov pre: nazov tymu, pocet zapasov, pocet vyhier, pocet prehier, pocet remiz, pocet strelenych golov, pocet obdrzanych golov, rozdiel medzi strelenymi a obdraznymi golmy.
+
+Teda zapisem tymi do tabulky. Potom rozoberam zapasy zapas po zapase. Info o danom zapase získavam postupne pomocou substring ako bolo spomenuté vyššie a zapíšem do pola o dlzke 4 (tymJeden, pocet golov tymu jeden, pocet golov tymu dva, tym dva).
+
+Info z tohto pola zapísem do nasej dvoj rozmernej tabulky. Vezmem si nazov prveho tymu vyhladam ho v 2d tabulke a pozapisujem mu info (pripocitam mu jeden zapas, pripocitam mu pocet golov, pripocitam mu pocet obdrzanych golov, preratam rozdiel golov (pocet strelenych minus pocet obdrzanych)). Ak bol pocet golov vyssi ako pocet obdrzanych golov pripocitam mu jednu vyhru, ak naopak tak pripocitam prehru a ak bolo rovnako tak mu pripocitam jednu remizu. Netreba zabudnú pripocíta pocet bodov (ak bola vıhra tak +3body ak prehra tak +0 a ak remíza tak +1 bod). Teraz prezeram stale to iste pole kde mam info o zapase. Teraz ho ale prezeram opacne z prava do ¾ava (treba zapísa info aj tımu dva). Postup je ten istı len z opacnej strany.
+
+Takto to opakujem pre kazdy riadok, ktory obsahuje info o zapase.
+
+Zoradovanie tımov:
+Tımi sú na vıstupe zoradené pod¾a tıchto pravidiel (v poradí):
+    Most points earned.
+    Most wins.
+    Most goal difference (i.e., goals scored - goals against)
+    Most goals scored.
+    Fewest games played.
+    Case-insensitive lexicographic order.
+
+V našej 2d tabulke si najprv zoradim stlpec, ktorı obsahuje pocet bodov. Zapamatam si ako sa mi zmenilo poradie riadkov. (napr. riadok 1 sa presunul na riadok 3 atd. môem poui jednorozmerné pole kde index pola predstavuje pôvodne zoradenie a obsah pola na danom indexe predstavuje zmenene poradie). Podla tohto poradia si poprehadzujem aj ostatne riadky.
+Teraz si prezriem ci niekto nemá rovnako bodov, ak má, tak tie riadky, ktoré majú rovnako bodov zoradím podla poctu vıhier (zotriedim stlpec pocet vıhier u tıchto riadkov) zapamatam si zmeny a podla nich zotriedim dane riadky.
+
+Takto postupujem podla vsetkych pravidiel zoradovania.

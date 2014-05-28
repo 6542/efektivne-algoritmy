@@ -1,0 +1,24 @@
+110204 - Crypt kicker
+---------------------
+
+Častá, ale nie moc bezpečná metóda šifrovania textu je permutácia písmen abecedy.
+Inými slovami, každé písmeno v abecede je nahradené v texte iným písmenom.
+Aby bolo zaistené, že šifrovanie je obojstranné, žiadne dva písmená niesú nahradené rovnakým písmenom.
+
+Vašou úlohou je dešifrovať niekoľko zakódovaných riadkov textu, za predpokladu, že každý riadok
+používa inú sadu náhrad, a že všetky slová v dešifrovanom texte sú zo slovníka známych slov.
+
+VSTUP
+-----
+
+Vstup sa skladá z riadku, ktorý obsahuje celé číslo n, nasledovaný n slovami zložených z malých písmen,
+jedno slovo na riadok, v abecednom poradí. Týchto n slov skladá slovník slov, ktoré sa môžu objaviť v dešifrovanom texte.
+Po slovníku nasleduje niekoľko riadkov vstupu. Každý riadok je zašifrovaný, ako je popísané vyššie.
+Slovník obsahuje do 1000 slov. Žiadne slovo nepresahuje dĺžku 16 znakov.
+Šifrované riadky obsahujú iba malé písmená a medzery, a neprekračujú dĺžku 80 znakov.
+
+VÝSTUP
+------
+
+Dešifruj každý riadok a vypíš ich na štandardný výstup. Ak existuje viac riešení, vyber jedno z nich.
+Ak riešenie neexistuje, vymeň každé písmeno abecedy za hviezdičku.

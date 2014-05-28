@@ -1,0 +1,34 @@
+110207 - Contest Scoreboard
+---------------------------
+
+Chcete súťažiť v ACM ICPC? Potom ste mali vedieť ako udržať skóre! Súťažiaci sú hodnotený najprv
+podľa počtu vyriešených problémov (čím viac, tým lepšie), potom podľa klesajúceho množstva
+pokutového času. Ak sú dvaja alebo viac súťažiacich rovnako hodnotení v oboch prípadoch,
+sú zobrazení v poradí podľa čísla tímu vzostupne.
+
+Problém je považovaný za vyriešený, ak niektorý z odoslaní tohto problému bol vyhodnotený správne.
+Trestný čas sa vypočíta ako počet minút až do prvého správne vyhodnoteného odoslania, plus 20 minút
+za každé nesprávne odoslanie pred správnym riešením. Za vevyriešené problémy sa nedávajú žiadne časové tresty.
+
+VSTUP
+-----
+
+Vstup začína s jediným kladným číslom na riadku, ktorý udáva počet prípadov, z ktorých každý je popísaný nižšie.
+Tento riadok je nasledovaný prázdnym riadkom. Prázdny riadok sa tiež nachádza medzi dvoma po sebe nasledujúcimi vstupmi.
+
+Vstup sa skladá zo radu hodnotení rozhodcov, ktoré obsahujú záznamy od niektorých alebo všetkých súťažiacich 1 až 100
+pri riešení problémov 1 až 9. Každý riadok vstupu sa skladá z troch čísel a písmena vo formáte L,
+kde L je C, I, R, U, alebo E. Čo znamená správne, nesprávne, vysvetlenie požiadavky, nehodnotenné a chybné podanie.
+Posledné tri prípady nemajú vplyv na bodovanie.
+
+Riadky vstupu sa zobrazujú v poradí, v akom boli prijaté na podanie.
+
+VÝSTUP
+------
+
+Výstup pre každý testovací prípad sa bude skladať z hodnotiacej tabuľky, zoradenej podľa kritérií popísaných vyššie.
+Každý riadok výstupu bude obsahovať číslo súťažiacieho, počet problémov riešených súťažiacim a celkový čas trestu
+nahromadenéhp súťažiacim. Vzhľadom k tomu, že nie všetky súťažiaci sa skutočne zúčastňujú, treba zobraziť iba tých súťažiacich,
+ktorí urobili aspoň jedno odoslanie.
+
+Výstup z dvoch po sebe idúcich prípadov budú oddelené prázdnym riadkom.
