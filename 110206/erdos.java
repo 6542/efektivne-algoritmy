@@ -1,21 +1,3 @@
-/*
-Kadı kto napísal èlánok s Erdosom má èíslo 1, a potom kadı kto písal èlánok s tım kto písal priamo s Erdosom má èíslo 2, a ten kto písal èlánok s tım , kto má èíslo 2 má èíslo 3 atï. 
-Input obsahuje databazu autorov a èlánkov. Najprv je èíslo poètu prípadov. Potom sú dve èísla, prvé èíslo je poèet riadkov obsahujúcich autorov s èlánkom, ktorı napísali. Druhé èíslo poèet autorov v zozname pod èlánkami. To sú autori pre ktorıch máme vypoèíta erdos èíslo. Tı ktorı nemajú iadne prepojenie s Erdosom majú erdos èíslo "infinity". 
-
-
-
-Pracuje to priblizne takto:
-- spracujeme kolko má byt vstupov atd. ako vzdy
-- autorou si rozdelime autoriClanku = clanok.split("\\.\\: |\\.\\, ");
-- pri prechadzani autori clanku nepocitam s poslednim polickom lebo tam je nazov clanku
-  for(int i1 =0;i1<autoriClanku.length-1;i1++)
-- prejdem vsetkych autorov v clanku zistim ci je tam erdos, ak tam je tak si to poznacim a breaknem
-- dalej ak tam teda ten erdos bol tak vsetkych autorov daneho clanku vlozim do hashmapy s hodnotou level(nastaveny je na jedna), inak ak tam nieje idem dalej znovu prehladavam vsetkych autorov a hladam ci niektory z nich uz nieje v hash mape a má nastavenu hodnotu level, ak tam dakto taky je oznacim si ho, zvisim level a breaknem, ak tam nik taki nebol tak si to poznacim
-- dalej ak tam teda je taky tak znovu prejdem vsetkych clenov clanku , ak sa nenachadzaju v hashmape tak ich tam vlozim a dam im hodnotu level (co je teraz uz zvysena hodnota), inak znovu prejdem vsetkych clenov clanku, vlozim ich do hashmapy s cislom -1 (co potom bude predstavovat hodnotu infiinty)
-- uz treba len vypisat hodnoty u tych pozadovanych autorov - to som nerobil
-- vycistit si zoznam hashmapy a prejdeme k dalsiemu prípadu
-*/
-
 import java.io.File;
 import java.io.IOException;
 import java.io.Reader;
@@ -23,6 +5,31 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Scanner;
 
+/*
+    110206 - Erdos Numbers
+    ----------------------
+
+	Kadı kto napísal clánok s Erdosom má císlo 1, a potom kadı kto písal clánok s tım kto písal priamo s
+	Erdosom má císlo 2, a ten kto písal clánok s tım , kto má císlo 2 má císlo 3 atd.
+	Input obsahuje databazu autorov a clánkov. Najprv je císlo poctu prípadov. Potom sú dve císla,
+	prvé císlo je pocet riadkov obsahujúcich autorov s clánkom, ktorı napísali. Druhé císlo pocet autorov v zozname
+	pod clánkami. To sú autori pre ktorıch máme vypocíta erdos císlo. Tı ktorı nemajú iadne prepojenie s Erdosom majú erdos císlo "infinity".
+
+	Pracuje to priblizne takto:
+
+	- spracujeme kolko má byt vstupov atd. ako vzdy
+	- autorou si rozdelime autoriClanku = clanok.split("\\.\\: |\\.\\, ");
+	- pri prechadzani autori clanku nepocitam s poslednim polickom lebo tam je nazov clanku
+	  for(int i1 =0;i1<autoriClanku.length-1;i1++)
+	- prejdem vsetkych autorov v clanku zistim ci je tam erdos, ak tam je tak si to poznacim a breaknem
+	- dalej ak tam teda ten erdos bol tak vsetkych autorov daneho clanku vlozim do hashmapy s hodnotou level(nastaveny je na jedna),
+	inak ak tam nieje idem dalej znovu prehladavam vsetkych autorov a hladam ci niektory z nich uz nieje v hash mape a má nastavenu hodnotu level,
+	ak tam dakto taky je oznacim si ho, zvisim level a breaknem, ak tam nik taki nebol tak si to poznacim
+	- dalej ak tam teda je taky tak znovu prejdem vsetkych clenov clanku , ak sa nenachadzaju v hashmape tak ich tam vlozim a dam im hodnotu level (co je teraz uz zvysena hodnota),
+	inak znovu prejdem vsetkych clenov clanku, vlozim ich do hashmapy s cislom -1 (co potom bude predstavovat hodnotu infiinty)
+	- uz treba len vypisat hodnoty u tych pozadovanych autorov - to som nerobil
+	- vycistit si zoznam hashmapy a prejdeme k dalsiemu prípadu
+*/
 
 public class Main {
 
@@ -49,12 +56,12 @@ public class Main {
 			for(int k =0;k<pocetClankov;k++){
 				clanok = sc.nextLine();
 				autoriClanku = clanok.split("\\.\\: |\\.\\, ");
-				
+
 				for(int i1 =0;i1<autoriClanku.length-1;i1++) {
 					autoriClanku[i1]=autoriClanku[i1]+".";
 					System.out.println(autoriClanku[i1]);
 				}
-				
+
 				for(int j =0;j<autoriClanku.length-1;j++){
 					if(autoriClanku[j].equals("Erdos, P.")){
 						jeTamErdos = true;
@@ -95,9 +102,9 @@ public class Main {
 								}
 							}
 						}
-						
+
 					}
-				
+
 			}//pocet clankov
 			for(int k =0;k<pocetAutorov;k++){
 				sc.nextLine();
@@ -111,5 +118,5 @@ public class Main {
 		}//pocet pripadov
 		autorAErdosCislo.clear();
 	}
-	
+
 }

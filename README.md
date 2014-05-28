@@ -8,7 +8,7 @@ Zoznam
 
 |Nazov                           |Odkaz             |Popis                      |Obtiaznost |Student          |Hotove  |
 |--------------------------------|------------------|---------------------------|-----------|-----------------|--------|
-|Erdos Numbers                   |[110206](/110206/)|-                          |2          |Jaroslav Beňo    |Nie     |
+|Erdos Numbers                   |[110206](/110206/)|[Popis](/110206/popis.txt) |2          |Jaroslav Beňo    |Ano     |
 |Football (aka Soccer)           |[110408](/110408/)|[Popis](/110408/popis.txt) |1          |Jaroslav Beňo    |Ano     |
 |Counting                        |[110603](/110603/)|-                          |2          |Matej Brašeň     |Nie     |
 |Cutting Sticks                  |[111105](/111105/)|-                          |2          |Matej Brašeň     |Nie     |
