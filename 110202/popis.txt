@@ -1,0 +1,19 @@
+110202 - Poker Hands
+----------------------
+
+Tuto ulohu treba riesit tak, ze pre oboch hracov vzdy vypocitame konkretne cislo ktore jasne urci ze ktory z hracov
+vyhrava. Najvacsiu hodnotu bude mat samozrejme cista postupka, o nieco nizsiu bude mat poker("styri rovnake") a tak dalej.
+
+Potrebujeme:
+
+Vytvorime triedu karta, ktora bude udrzovat farbu a hodnotu kazdej karty. Dalej potrebujeme funkcie ktore
+budu vracat pre kazdy typ (dvojicu, trojicu, ...) konkretne cisla aj vzhladom na to ake velke karty hrac ma.
+
+Postup:
+
+Nacitame karty pre oboch hracov zo vstupu a pre kazdeho hraca vytvorime zoznam kariet (zoznam instancii triedy karta)
+Postupne zistujeme ci hrac ma na ruke Cistu postupku, ak niee tak kontrolujeme stvoricu ak nema ani tu tak
+kontrolujeme full house a tak dalej. Ak natrafime uz na nieco co hrac na ruke ma napriklad dva pary tak
+funkcia vrati rank(hodnotu) ktoru sme si dopredu urcitli ako hodnotu pre dva pary a pripocita k nej
+aj hodnotu kariet (za esa bude viac podov ako za kralov). Toto spravime pre oboch hracov
+Ked uz mame pre oboch hracov hodnotu kariet staci ich jednoducho porovnat. :)

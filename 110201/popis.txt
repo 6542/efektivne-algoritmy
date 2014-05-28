@@ -1,0 +1,6 @@
+110201 - Jolly jumpers
+----------------------
+
+Nacitam riadok integerov a postupne zacnem odcitavat prave cislo od laveho a ukladam si ich absolútnu
+hodnotu do pola. Potom pozriem ci sú výsledné hodnoty zoradené od najväcšieho po najmenšie ak sú tak
+je to JOLLY JUMPER ak nie sú tak to nie je JOLLY JUMPER.

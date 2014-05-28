@@ -180,7 +180,7 @@ def existuje_popis(idx):
 
 
 def popis_link(idx):
-    return '[Link](/{0}/popis.txt)'.format(idx) if existuje_popis(idx) else '-'
+    return '[Popis](/{0}/popis.txt)'.format(idx) if existuje_popis(idx) else '-'
 
 
 with open('README.md', 'w') as fp:

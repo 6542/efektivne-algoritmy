@@ -2,8 +2,7 @@
 -------------------
 
 Nacitame velkost pola, vytvorime 2x tak velke pole +1 a oznacime okraje pomocou #.
-Vyplnime pole podla zadania.
-Prechadzame kazde policko okolo vybraneho policka a zistujeme ci sa tam uz nachadza "stena", alebo sme tam uz boli,
-alebo je tato cesta volna. Zaroven zapisujeme dlzku okruhu.
-V pripade, ze sme sa pomocou tohoto vyhladavania dostali spat na povodne policko k vyslednemu poctu hladanych moznosti pripocitame jednu. A porovname dlzku tohoto okruhu s poslednym najvacsim.
+Vyplnime pole podla zadania. Prechadzame kazde policko okolo vybraneho policka a zistujeme ci sa tam uz nachadza "stena", alebo sme tam uz boli,
+alebo je tato cesta volna. Zaroven zapisujeme dlzku okruhu. V pripade, ze sme sa pomocou tohoto vyhladavania dostali spat na povodne policko
+k vyslednemu poctu hladanych moznosti pripocitame jednu. A porovname dlzku tohoto okruhu s poslednym najvacsim.
 Takto prejdeme vsetky volne cesty a vypiseme vysledne hodnoty - Pocet okruhov a dlzku najdlhsieho z nich.
