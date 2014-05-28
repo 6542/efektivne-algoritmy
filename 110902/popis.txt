@@ -1,0 +1,10 @@
+110902 - Playing With Wheels
+----------------------------
+
+Vytvorime pole vsetkych cisiel a rad s ktorym budeme pracovat.
+Do pola zapiseme kazde nevhodne cislo. Teda ak je to cislo 8402, tak do pola[8402]=1.
+Do radu vlozime vstupnu hodnotu, oznacime si prve a posledne (zatial su rovnake) pouzite miesto v rade
+Vyberieme hodnotu z prveho pouziteho miesta v rade a vlozime vsetkych jeho susedov,
+ktory neboli pouzity a su povoleny, za posledne pouzite miesto v rade
+Kazde vlozene cislo zapiseme do pola.
+Vkladame az kym nenajdeme cielovu hodnotu, alebo nevyprazdnime rad.

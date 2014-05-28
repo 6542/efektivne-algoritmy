@@ -12,8 +12,8 @@ Zoznam
 | Football (aka Soccer)                     | [110408](/110408/) | 1           | Jaroslav Beňo     | Ano      |
 | Counting                                  | [110603](/110603/) | 2           | Matej Brašeň      | Nie      |
 | Cutting Sticks                            | [111105](/111105/) | 2           | Matej Brašeň      | Nie      |
-| Slash Maze                                | [110904](/110904/) | 2           | Martin Brzula     | Nie      |
-| Playing With Wheels                       | [110902](/110902/) | 2           | Martin Brzula     | Nie      |
+| Slash Maze                                | [110904](/110904/) | 2           | Martin Brzula     | Ano      |
+| Playing With Wheels                       | [110902](/110902/) | 2           | Martin Brzula     | Ano      |
 | Contest Scoreboard                        | [110207](/110207/) | 1           | Juraj Bubniak     | Ano      |
 | Crypt Kicker                              | [110204](/110204/) | 2           | Juraj Bubniak     | Ano      |
 | Freckles                                  | [111001](/111001/) | 2           | Ján Fekeš         | -        |
