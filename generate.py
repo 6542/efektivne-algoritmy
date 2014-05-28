@@ -122,7 +122,6 @@ Jaroslav  Beňo      110206  2   110408  1
 Matej  Brašeň       110603  2   111105  2
 Martin  Brzula      110904  2   110902  2
 Juraj  Bubniak      110207  1   110204  2
-Ján  Fekeš      111001  2   110406  2
 Peter  Franček      110601  1   110705  2
 Ladislav  Gubala        110107  1   110106  2
 Ivan  Hraško        110908  3   110505  3
@@ -143,37 +142,44 @@ Ján  Turský     110502  1   110504  2
 Martin Jančo        110702    2   110703    1
 '''
 
-
 tasks = [task for task in tasks.split('\n') if task]
 task_dict = {}
 
 for task in tasks:
     splitted = task.split(' ', 3)
-
     title = splitted[3]
-
     if ',' in title:
         title = title.split(',')[0]
-
     task_dict[splitted[1]] = title
-
 
 lines = [line.split() for line in data.split(u'\n') if line]
 nazov = 'Nazov'
 uloha = 'Odkaz'
+popis = 'Popis'
 obtiaznost = 'Obtiaznost'
 student = 'Student'
 hotove = 'Hotove'
 root = os.path.abspath(os.path.dirname(__file__))
 
+
 def existuje(idx):
     return 'Ano' if os.path.isdir(os.path.join(root, idx)) else 'Nie'
+
+
+def existuje_popis(idx):
+    return os.path.exists(os.path.join(root, idx, 'popis.txt'))
+
+
+def popis_link(idx):
+    return '[Link](/{0}/popis.txt)'.format(idx) if existuje_popis(idx) else '-'
 
 
 print '|',
 print nazov.ljust(41),
 print '|',
 print uloha.ljust(18),
+print '|',
+print popis.ljust(27),
 print '|',
 print obtiaznost.ljust(11),
 print '|',
@@ -185,6 +191,8 @@ print '|',
 print 41 * '-',
 print '|',
 print 18 * '-',
+print '|',
+print 27 * '-',
 print '|',
 print 11 * '-',
 print '|',
@@ -201,6 +209,8 @@ for name, lastname, id1, level1, id2, level2 in lines:
     print '|',
     print '[{0}](/{1}/)'.format(id1, id1),
     print '|',
+    print popis_link(id1).ljust(27, ' '),
+    print '|',
     print level1.ljust(11, ' '),
     print '|',
     print fullname.ljust(17, ' '),
@@ -211,6 +221,8 @@ for name, lastname, id1, level1, id2, level2 in lines:
     print task_dict[id2].ljust(41),
     print '|',
     print '[{0}](/{1}/)'.format(id2, id2),
+    print '|',
+    print popis_link(id2).ljust(27, ' '),
     print '|',
     print level2.ljust(11, ' '),
     print '|',
