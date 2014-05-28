@@ -9,7 +9,7 @@ Zoznam
 | Nazov                                     | Odkaz              | Obtiaznost  | Student           | Hotove   |
 | ----------------------------------------- | ------------------ | ----------- | ----------------- | -------- |
 | Erdos Numbers                             | [110206](/110206/) | 2           | Jaroslav Beňo     | Nie      |
-| Football (aka Soccer)                     | [110408](/110408/) | 1           | Jaroslav Beňo     | Nie      |
+| Football (aka Soccer)                     | [110408](/110408/) | 1           | Jaroslav Beňo     | Ano      |
 | Counting                                  | [110603](/110603/) | 2           | Matej Brašeň      | Nie      |
 | Cutting Sticks                            | [111105](/111105/) | 2           | Matej Brašeň      | Nie      |
 | Slash Maze                                | [110904](/110904/) | 2           | Martin Brzula     | Nie      |
