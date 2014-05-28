@@ -32,3 +32,24 @@ nahromadenéhp súťažiacim. Vzhľadom k tomu, že nie všetky súťažiaci sa 
 ktorí urobili aspoň jedno odoslanie.
 
 Výstup z dvoch po sebe idúcich prípadov budú oddelené prázdnym riadkom.
+
+POSTUP
+------
+
+1. Z prveho riadku nacitame pocet rieseni. Nasleduje prazdny riadok ten preskocime.
+2. Na nasledujucich riadkoch su uz samotne riesenia, prejdeme ich a vlozime do zoznamu rieseni.
+3. Riesenia zoradime podla vstupnych kriterii.
+4. Nasledne riesenia vlozime do vysledkovej listiny.
+5. Vysledkovu listinu nasledne zoradime podla vstupnych kriterii.
+
+Zoradenie rieseni:
+
+1. cislo sutaziaceho
+2. cislo problemu
+3. cas
+
+Zoradenie vysledkovej listiny:
+
+1. pocet vyriesenych uloh
+2. dlzka penalty casu
+3. cislo sutaziaceho

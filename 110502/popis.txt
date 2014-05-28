@@ -55,4 +55,3 @@ Ak vysledne cislo je palindrom (citatelne rovnako zlava-doprava aj zprava-dolava
 V opacnom pripade vysledne cislo po sucte vezmeme, spravime jeho reverz a scitame s reverznutym cislom.
 Skontorlujeme ci palindrom, inak opakujeme postup. V pripade cisla 195 sa nasiel po 4 scitani a
 vypise sa pocet scitani a vysledny palindrom: 4 9339*
-*/

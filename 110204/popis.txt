@@ -22,3 +22,16 @@ VÝSTUP
 
 Dešifruj každý riadok a vypíš ich na štandardný výstup. Ak existuje viac riešení, vyber jedno z nich.
 Ak riešenie neexistuje, vymeň každé písmeno abecedy za hviezdičku.
+
+POSTUP
+------
+
+1. Na prvom riadku nacitame pocet slov slovnika.
+2. Na dalsich riadkoch su jednotlive slova slovnika, prejdeme ich a vlozime do pola.
+3. Kazdy znak z kazdeho slova pridame do sifrovacej mapy ako kluc a hodnotu nastavime na * (hviezdicku).
+4. Vytvorime si mapu ktorej klucom je pocet podobnych pismen a hodnota je slovnik slov.
+5. Pokial este mapa neexistuje pre dane slovo, vytvorme ju a vlozme slovo.
+6. Nasledne mapu vlozime do mapy podobnych pismen na index ktory je rovny poctu podobynch pismen slova.
+7. Pokial mapa existuje tak len aktualizujeme jej slova.
+8. Po slovach slovnika nasleduju jednotlive sifrovane riadky.
+9. Desifrujeme ich pomocou naplnenych sifrovacich a desifrovacich map a slovnika.

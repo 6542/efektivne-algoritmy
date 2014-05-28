@@ -155,7 +155,7 @@ class Main {
 
     private static final char STAR = '*';
 
-    // rozdelenie na pocet pismen a poton na pocet podobnych pismen
+    // rozdelenie na pocet pismen a potom na pocet podobnych pismen
     private final Map<Integer, Map<Integer, List<Word>>> dict = new HashMap<Integer, Map<Integer, List<Word>>>();
 
     // desifrovacia mapa pismeno => pismeno
