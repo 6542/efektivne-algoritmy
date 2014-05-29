@@ -10,8 +10,8 @@ Zoznam
 |--------------------------------|------------------|---------------------------|-----------|-----------------|--------|
 |Erdos Numbers                   |[110206](/110206/)|[Popis](/110206/popis.txt) |2          |Jaroslav Beňo    |Ano     |
 |Football (aka Soccer)           |[110408](/110408/)|[Popis](/110408/popis.txt) |1          |Jaroslav Beňo    |Ano     |
-|Counting                        |[110603](/110603/)|-                          |2          |Matej Brašeň     |Nie     |
-|Cutting Sticks                  |[111105](/111105/)|-                          |2          |Matej Brašeň     |Nie     |
+|Counting                        |[110603](/110603/)|[Popis](/110603/popis.txt) |2          |Matej Brašeň     |Ano     |
+|Cutting Sticks                  |[111105](/111105/)|[Popis](/111105/popis.txt) |2          |Matej Brašeň     |Ano     |
 |Slash Maze                      |[110904](/110904/)|[Popis](/110904/popis.txt) |2          |Martin Brzula    |Ano     |
 |Playing With Wheels             |[110902](/110902/)|[Popis](/110902/popis.txt) |2          |Martin Brzula    |Ano     |
 |Contest Scoreboard              |[110207](/110207/)|[Popis](/110207/popis.txt) |1          |Juraj Bubniak    |Ano     |

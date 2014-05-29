@@ -1,0 +1,26 @@
+111105 - Cutting Sticks
+-----------------------
+
+You have to cut a wood stick into several pieces. The most affordable company, Analog Cutting Machinery (ACM),
+charges money according to the length of the stick being cut. Their cutting saw allows them to make only one cut at a time.
+
+It is easy to see that different cutting orders can lead to different prices. For example,
+consider a stick of length 10 m that has to be cut at 2, 4, and 7 m from one end. There are several choices.
+One can cut first at 2, then at 4, then at 7. This leads to a price of 10 + 8 + 6 = 24 because the first stick was of 10 m,
+the resulting stick of 8 m, and the last one of 6 m. Another choice could cut at 4, then at 2, then at 7.
+This would lead to a price of 10 + 4 + 6 = 20, which is better for us.
+
+Your boss demands that you write a program to find the minimum possible cutting cost for any given stick.
+
+Input
+
+The input will consist of several input cases. The first line of each test case will contain a positive number l
+that represents the length of the stick to be cut. You can assume l < 1,000. The next line will contain the
+number n (n < 50) of cuts to be made. The next line consists of n positive numbers ci ( 0 < ci < l) representing
+the places where the cuts must be made, given in strictly increasing order.
+
+An input case with l = 0 represents the end of input.
+
+Output
+
+Print the cost of the minimum cost solution to cut each stick in the format shown below.
